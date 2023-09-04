@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Humburger Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><h1>Full Stack Web Dev</h1></div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <div class="closeMenu"><i class="fa fa-times"></i></div>
+      </ul>
+    </nav>
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="car">
+        <img src="car.svg" alt="">
+        <hr class="road">
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+    </section>
+    <section id="footer">
+      <div class="copyright">
+        <p>tamk&copy;2023</p>
+      </div>
+      <div class="social-media">
+        <span class="icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-github"></i>
+        </span>
+      </div>
+    </section>
+    <script>
+      const mainMenu = document.querySelector(".mainMenu");
+      const closeMenu = document.querySelector(".closeMenu");
+      const openMenu = document.querySelector(".openMenu");
+      const menu_items = document.querySelectorAll("nav .mainMenu li a");
+
+      openMenu.addEventListener("click", show);
+      closeMenu.addEventListener("click", close);
+
+      // close menu when you click on a menu item
+      menu_items.forEach((item) => {
+        item.addEventListener("click", function () {
+          close();
+        });
+      });
+
+      function show() {
+        mainMenu.style.display = "flex";
+        mainMenu.style.right = "0";
+      }
+      function close() {
+        mainMenu.style.right = "-100%";
+      }
+    </script>
+  </body>
+</html>
