@@ -16,6 +16,8 @@ nav {
   left: 0;
   top: 0;
   justify-content: space-between;
+  padding: 0px 30px;
+
 }
 nav .mainMenu {
   display: flex;
@@ -80,7 +82,7 @@ nav .logo {
     display: block;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 49px;
   }
   nav .openMenu {
     display: block;
