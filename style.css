@@ -63,7 +63,7 @@ nav .logo {
   cursor: pointer;
   text-transform: uppercase;
 }
-@media (max-width: 800px) {
+@media (max-width: 720px) {
   nav .mainMenu {
     height: 100vh;
     width: 120px;
